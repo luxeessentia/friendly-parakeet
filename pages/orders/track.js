@@ -1,0 +1,4 @@
+﻿import Layout from '../../components/Layout';
+export default function Track(){
+  return (<Layout><h1>Track Your Order</h1><form onSubmit={(e)=>{ e.preventDefault(); const id=e.target.order.value; const email=e.target.email.value; fetch('/api/orders/lookup', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ id, email }) }).then(r=>r.json()).then(d=> alert(d.status ? 'Status: '+d.status : 'Order not found') ); }}><input name='order' placeholder='Order number' required style={{width:'100%',padding:8,marginBottom:8}}/><input name='email' type='email' placeholder='Email' required style={{width:'100%',padding:8,marginBottom:8}}/><button className='btn' type='submit'>Track</button></form></Layout>);
+}

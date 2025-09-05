@@ -1,0 +1,1 @@
+﻿export default function handler(req,res){ res.status(200).json({ ok:true, project: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || null }); }

@@ -1,0 +1,2 @@
+﻿import Layout from '../../components/Layout';
+export default function Success(){ return (<Layout><h1>Order Confirmed</h1><p>Thank you — your order is confirmed. You'll receive a receipt by email.</p></Layout>); }

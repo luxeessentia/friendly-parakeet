@@ -1,0 +1,2 @@
+﻿import Layout from '../components/Layout';
+export default function FAQ(){ return (<Layout><h1>FAQ</h1><p>Shipping: Free standard shipping on U.S. orders +. Express on + for orders over .</p></Layout>); }

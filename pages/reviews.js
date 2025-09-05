@@ -1,0 +1,3 @@
+﻿import Layout from '../components/Layout';
+import { useEffect, useState } from 'react';
+export default function Reviews(){ const [reviews,setReviews]=useState([]); useEffect(()=>{ fetch('/api/reviews').then(r=>r.json()).then(d=>setReviews(d)); },[]); return (<Layout><h1>Customer Reviews</h1><div style={{display:'grid',gap:12}}>{reviews.map((r,i)=>(<div key={i} style={{padding:12,border:'1px solid #eee',borderRadius:8}}><strong>{r.name}</strong><div style={{color:'var(--gold)'}}>{'★'.repeat(r.rating)}</div><div style={{marginTop:6}}>{r.text}</div></div>))}</div></Layout>); }
